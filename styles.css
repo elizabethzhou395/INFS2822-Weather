@@ -1,0 +1,18 @@
+h1,h2 {
+    font-family:"Avenir", "Arial"
+}
+
+body {
+    font-family:"Avenir", "Arial"
+}
+
+table, tr, td, th{
+    border: 1px solid black;
+    border-collapse:collapse;
+    font: 12px;
+    padding:10px;
+}
+
+th {
+    background-color: lightgrey;
+}

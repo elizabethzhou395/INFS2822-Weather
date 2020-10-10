@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Weather Observations App
+        </title>
+        <link type = "text/css" rel="stylesheet" href = "style.css">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+	    	<script src="node_modules/underscore/underscore-min.js"></script>
+		    <script src="logic.js"></script>
+    </head>
+    <body onLoad="bodyDidLoad()">
+        <h1>
+            Weather Observations App
+        </h1>
+        <p>
+            <label for ="maxTempEntry">  Maximum temperature: </label>
+        <input type = "text" id = "maxTempEntry" name ="entrybar">
+        </p>
+        <p>
+            <label for ="minTempEntry">  Minimum temperature: </label>
+        <input type = "text" id = "minTempEntry" name ="entrybar">
+        </p>
+        <p>
+            <label for = "conditionEntry"> Conditions: </label>
+            <select id ="conditionEntry"> 
+                <option value = "Sunny"> Sunny </option>
+                <option value = "Cloudy"> Cloudy </option>
+                <option value = "Rainy"> Rainy </option>
+                <option value = "Thunderstorms"> Thunderstorms </option>
+                <option value = "Snow"> Snow </option>
+            </select>
+            <!--<label for ="conditionEntry">  Conditions: </label>
+        <input type = "text" id = "conditionEntry" name ="entrybar">-->
+        </p>
+        <button type="button" id ="submitButton" onclick="userDidClickCreate()">Submit</button>
+        <button type="button" id ="downloadButton" onclick="downloadJSON()">Download</button>
+        </p>
+        <hr>
+        <h2>
+            Upload existing file
+        </h2>
+        <p>
+            <button type="file" id ="fileUploader">Choose File</button>
+        </p>
+        <hr>
+        <table id ="weatherTable">
+            <tr>
+                <th> ID </th>
+                <th> Maximum Temperature </th>
+                <th> Minimum Temperature </th>
+                <th> Conditions </th>
+                <th> Action </th>
+            </tr>
+            <tbody id = "tbodyForObservations">
+            </tbody>
+        </table>
+    </body>
+</html>
